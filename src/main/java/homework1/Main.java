@@ -5,6 +5,7 @@ import java.util.function.*;
 public class Main {
     public static void main(String[] args) {
         FabricOfCat<Cat> fabricOfCat = () -> new Cat();
+
         Supplier<Cat> supplier = () -> fabricOfCat.createCate();
         Cat cat = supplier.get();
 
@@ -22,6 +23,11 @@ public class Main {
             System.out.println(cat);
         }
 
+        BiPredicate<Cat, Integer> biPredicate = (x, lengthOfGoodName) -> x.getName().length() > lengthOfGoodName;
+        if (biPredicate.test(cat, 9)) {
+            System.out.println("the best name is " + cat);
+        }
+
         UnaryOperator<Cat> unaryOperator = x -> {
             x.setName(x.getName().concat(" is always hungry"));
             return x;
@@ -35,11 +41,6 @@ public class Main {
         };
         binaryOperator.apply("Barsik", "Ivanov");
         System.out.println(cat);
-
-        BiPredicate<Cat, Integer> biPredicate = (x, lengthOfGoodName) -> x.getName().length() > lengthOfGoodName;
-        if (biPredicate.test(cat, 9)) {
-            System.out.println("the best name is " + cat);
-        }
 
         Function<Cat, String> function = x -> x.getName() + " herbivore? " + x.isHerbivore();
         System.out.println(function.apply(cat));
