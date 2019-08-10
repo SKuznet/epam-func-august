@@ -1,6 +1,7 @@
 package lesson1;
 
 public class Main {
+    //test
     public static void main(String[] args) {
         Thread thread = new Thread(new Runnable() {
             public void run() {
