@@ -1,9 +1,9 @@
-package homework1;
+package homework1.cats;
 
-class Cat {
+public class Cat {
     private String name;
 
-    Cat(String name) {
+    public Cat(String name) {
         this.name = name;
     }
 

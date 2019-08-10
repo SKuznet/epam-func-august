@@ -1,5 +1,8 @@
 package homework1;
 
+import homework1.cats.Cat;
+import homework1.cats.CatFactory;
+
 import java.util.function.Supplier;
 import java.util.function.Consumer;
 import java.util.function.BiConsumer;
@@ -10,7 +13,7 @@ import java.util.function.BiPredicate;
 import java.util.function.UnaryOperator;
 import java.util.function.BinaryOperator;
 
-public class Main {
+public class Application {
     public static void main(String[] args) {
         Cat barsik = CatFactory.getCat("Barsik");
         Cat murzik = CatFactory.getCat("Murzik");
