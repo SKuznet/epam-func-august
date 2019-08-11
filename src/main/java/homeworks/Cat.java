@@ -1,5 +1,8 @@
 package homeworks;
 
+/**
+ * This class describes object of the homework - Cat.
+ */
 public class Cat {
     private String name;
     private String sex;
@@ -15,7 +18,7 @@ public class Cat {
         return name;
     }
 
-    public String getSex(){
+    public String getSex() {
         return sex;
     }
 
