@@ -2,7 +2,7 @@ package homework1;
 
 /**
  * Cat class is abstract due to fabric method pattern implementation: we delegate the procedure of
- * class instances creation to subclasses
+ * class instances creation to subclasses.
  */
 public abstract class Cat {
     private String name;

@@ -1,7 +1,7 @@
 package homework1;
 
 /**
- * Factory returns Cat class instances based on the breed parameter
+ * Factory returns Cat class instances based on the breed parameter.
  */
 public class CatFactory {
     public Cat createCat(String breed, String name, boolean isHungry, boolean isHerbivore) {
