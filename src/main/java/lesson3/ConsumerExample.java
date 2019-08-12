@@ -19,5 +19,4 @@ public class ConsumerExample {
         biConsumer1.accept(11, "November");
         System.out.println(map);
     }
-
 }
