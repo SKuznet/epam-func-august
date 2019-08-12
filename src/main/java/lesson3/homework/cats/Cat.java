@@ -22,6 +22,14 @@ public class Cat {
         return this;
     }
 
+    public boolean isPlaying() {
+        return playing;
+    }
+
+    public boolean isPlayingWithAnotherCat() {
+        return playingWithAnotherCat;
+    }
+
     public String getName() {
         return name;
     }
