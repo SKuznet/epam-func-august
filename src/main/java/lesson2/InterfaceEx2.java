@@ -1,4 +1,7 @@
 package lesson2;
 
-public interface InterfaceEx2 {
+@FunctionalInterface
+public interface InterfaceEx2 extends FunctionalInterfaceExample {
+    @Override
+    void checkMoney();
 }

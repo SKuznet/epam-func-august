@@ -1,4 +1,5 @@
 package lesson2;
 
-public interface InterfaceEx1 {
+@FunctionalInterface
+public interface InterfaceEx1 extends FunctionalInterfaceExample {
 }
