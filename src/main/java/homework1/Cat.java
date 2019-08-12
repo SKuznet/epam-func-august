@@ -5,13 +5,14 @@ import java.util.Random;
 
 /**
  * Class cat. Contains name, age and color
+ *
  * @author Ilia Ugriumov
  */
 public class Cat {
     private String name;
     private int age;
     private String colorFur;
-    private Random rnd = new Random (  );
+    private Random rnd = new Random ();
 
     public Cat(String name, int age, String colorFur) {
         this.name = name;
@@ -22,17 +23,18 @@ public class Cat {
     public Cat(String name, String colorFur) {
         this.name = name;
         this.colorFur = colorFur;
-        age = rnd.nextInt (20);
+        age = rnd.nextInt ( 20 );
     }
 
     /**
      * Is cat hungry
+     *
      * @return if random == 1 return false. Else return tru;
      */
-    public boolean isHungry(){
-        if(rnd.nextInt ( 3 ) == 1){
+    public boolean isHungry() {
+        if (rnd.nextInt ( 3 ) == 1) {
             return false;
-        }else {
+        } else {
             return true;
         }
     }
@@ -55,19 +57,21 @@ public class Cat {
 
     /**
      * Method do cat name to upper case
+     *
      * @return name in upper case;
      */
-    public Cat doNametoUpperCase(){
+    public Cat doNametoUpperCase() {
         this.setName ( getName ().toUpperCase () );
         return this;
     }
 
     /**
      * Set cat voice
+     *
      * @param specialVoice - string with cat voice
      * @return string. cat voice
      */
-    public String setVoice(String specialVoice){
+    public String setVoice(String specialVoice) {
         return specialVoice;
     }
 

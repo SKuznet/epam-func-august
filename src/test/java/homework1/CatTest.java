@@ -11,19 +11,19 @@ public class CatTest {
     private Cat cat;
 
     @Before
-    public void setUp(){
-        rnd = new Random (  );
-        cat = new Cat("Barsik", 5, "black" );
+    public void setUp() {
+        rnd = new Random ();
+        cat = new Cat ( "Barsik", 5, "black" );
     }
 
     @Test
-    public void testDoNametoUpperCase(){
-        Assert.assertEquals ( Cat.class, new Cat("Barsik", 5, "black").getClass ());
+    public void testDoNametoUpperCase() {
+        Assert.assertEquals ( Cat.class, new Cat ( "Barsik", 5, "black" ).getClass () );
         Assert.assertNotNull ( cat.doNametoUpperCase () );
     }
 
     @Test
-    public void testSetVoice(){
+    public void testSetVoice() {
         Assert.assertNotNull ( cat.setVoice ( "Mayu" ) );
         Assert.assertEquals ( "Myau", cat.setVoice ( "Myau" ) );
     }
