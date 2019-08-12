@@ -8,7 +8,7 @@ import java.util.function.*;
  * CatFunc shows functional interfaces with lambda logic
  */
 public class CatFunc {
-    private String name;
+    String name;
     private int weight;
     private boolean isHungry;
 
@@ -28,7 +28,7 @@ public class CatFunc {
         this.weight = weight;
     }
 
-    private boolean isHungry() {
+    boolean isHungry() {
         return isHungry;
     }
 
@@ -62,30 +62,30 @@ public class CatFunc {
     /**
      * Checks if name field not null
      */
-    private boolean hasName() {
+    boolean hasName() {
         return this.name != null;
     }
 
     /**
      * Returns Cat color
-     * */
-    private Color getCatColor() {
+     */
+    Color getCatColor() {
         if (this.name.equals("Snezhok")) return Color.WHITE;
         else return Color.BLACK;
     }
 
     /**
      * Returns color of heavier cat
-     * */
-    private Color getHeaviestCatColor(CatFunc catFunc) {
+     */
+    Color getHeaviestCatColor(CatFunc catFunc) {
         if (this.weight > catFunc.weight) return getCatColor();
         else return catFunc.getCatColor();
     }
 
     /**
      * Check cat for checking boolean parameter
-     * */
-    private static void checkCat(CatFunc cat, CheckCat checkCat) {
+     */
+    static void checkCat(CatFunc cat, CheckCat checkCat) {
         if (checkCat.check(cat)) {
             System.out.println(cat + "\n");
         }
@@ -94,8 +94,8 @@ public class CatFunc {
     /**
      * This is bad practice!
      * Printing of cat weight
-     * */
-    private static void printWeight(CatFunc cat, GetWeight get) {
+     */
+    static void printWeight(CatFunc cat, GetWeight get) {
         System.out.println(get.get(cat));
     }
 
@@ -120,46 +120,6 @@ public class CatFunc {
                 ", weight=" + weight +
                 ", isHungry=" + isHungry +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        CatFunc catOne = CatFactory.createCat("Barsik", 10);
-        CatFunc catTwo = CatFactory.createCat("Snezhok", 200);
-        CatFunc catNoName = CatFactory.createCat(5);
-        CatFunc catThree = CatFactory.createCat("Tom", 5, true);
-
-        Function<CatFunc, Color> function = f -> f.getCatColor();
-        System.out.println(function.apply(catOne));
-        System.out.println(function.apply(catTwo) + "\n");
-
-        BiFunction<CatFunc, CatFunc, Color> biFunction = (f1, f2) -> f1.getHeaviestCatColor(f2);
-        System.out.println(biFunction.apply(catOne, catTwo) + "\n");
-
-        Consumer<CatFunc> consumer = c -> System.out.println(c.getName() + "\n");
-        consumer.accept(catOne);
-
-        BiConsumer<CatFunc, CatFunc> biConsumer = (c1, c2) -> System.out.println(c1.getTwoNames(c2) + "\n");
-        biConsumer.accept(catOne, catTwo);
-
-        UnaryOperator<CatFunc> unaryOperator = u -> u.upperCaseNameCat();
-        System.out.println(unaryOperator.apply(catOne).name + "\n");
-
-        BinaryOperator<CatFunc> binaryOperator = (b1, b2) -> b1.motherCat(b2);
-        System.out.println(binaryOperator.apply(catOne, catTwo).name + "\n");
-
-        Predicate<CatFunc> predicate = p -> p.hasName();
-        System.out.println(predicate.test(catOne));
-        System.out.println(predicate.test(catNoName) + "\n");
-
-        BiPredicate<CatFunc, CatFunc> biPredicate = (b1, b2) -> b1.equals(b2);
-        System.out.println(biPredicate.test(catOne, catOne));
-        System.out.println(biPredicate.test(catOne, catTwo) + "\n");
-
-        Supplier<CatFunc> supplier = () -> catOne;
-        System.out.println(supplier.get() + "\n");
-
-        checkCat(catThree, c -> c.isHungry());
-        printWeight(catThree, c -> c.getWeight());
     }
 
     /**
