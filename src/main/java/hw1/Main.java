@@ -26,10 +26,10 @@ public class Main {
 
     // Operator example.
     UnaryOperator<String> unaryOperator = s -> s.toUpperCase();
-        System.out.println(unaryOperator.apply(murzik.getMeow()));
+        System.out.println(unaryOperator.apply(murzik.run()));
 
     // Predicate example.
-    Predicate<Cat> predicate = cat -> cat.getMeow().equals("Meow from Murzik!");
+    Predicate<Cat> predicate = cat -> cat.run().equals("Meow from Murzik!");
         if (predicate.test(murzik)) {
         System.out.println("It's murzik!");
     } else {
