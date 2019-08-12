@@ -1,6 +1,7 @@
 package hometask1;
 
 import hometask1.cats.AbstractCat;
+import hometask1.cats.CatService;
 
 import java.util.Arrays;
 import java.util.function.*;
@@ -37,7 +38,7 @@ public class CatFunctionalApp {
     }
 
     private boolean functionExample(String mood) {
-        Function<AbstractCat, String> function = cat -> cat.sayHi();
+        Function<AbstractCat, String> function = CatService::sayHi;
         System.out.println(function.apply(catFabric.getAbstractCat(mood)));
 
         Function<AbstractCat, Integer> function1 = cat -> cat.sayBye().length();
@@ -49,7 +50,7 @@ public class CatFunctionalApp {
     }
 
     private boolean operatorExample(String mood) {
-        UnaryOperator<String> unaryOperator = message -> message.toUpperCase();
+        UnaryOperator<String> unaryOperator = String::toUpperCase;
         System.out.println(unaryOperator.apply(catFabric.getAbstractCat(mood).toString()));
 
         BinaryOperator<String> binaryOperator = (sb1, sb2) -> sb1.concat(" " + sb2);
