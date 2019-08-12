@@ -1,6 +1,7 @@
 package hometask1.cats;
 
 public class RudeCat extends AbstractCat {
+
     public RudeCat(String name, String mood) {
         super(name, mood);
     }

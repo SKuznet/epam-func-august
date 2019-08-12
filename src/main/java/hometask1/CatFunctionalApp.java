@@ -46,7 +46,6 @@ public class CatFunctionalApp {
         BiFunction<AbstractCat, AbstractCat, String> biFunction = (c1, c2) -> c1.sayHi() + c2.sayBye();
         biFunction.apply(catFabric.getAbstractCat(mood), catFabric.getAbstractCat(mood));
         return true;
-
     }
 
     private boolean operatorExample(String mood) {
@@ -76,5 +75,4 @@ public class CatFunctionalApp {
         System.out.println(Arrays.toString(supplier1.get()));
         return true;
     }
-
 }
