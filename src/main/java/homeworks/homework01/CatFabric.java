@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.homework01;
 
 import java.util.function.Supplier;
 

@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.homework01;
 
 import java.util.function.*;
 
@@ -16,7 +16,7 @@ public class CatExecutor {
 
         printInfo(barsik);
         crowning(riska);
-        System.out.println(clone(murzik, 3));
+        System.out.println(cloning(murzik, 3));
         happyBirthday(barsik);
         System.out.println(setStatus(riska, "eating"));
         System.out.println(isOld(barsik));
@@ -52,12 +52,12 @@ public class CatExecutor {
     /**
      * Method using BiFunction<T, U, R> interface
      */
-    public static StringBuilder clone(Cat cat, Integer quantity) {
+    public static StringBuilder cloning(Cat cat, Integer quantity) {
         StringBuilder result = new StringBuilder("See how many cats here: ");
         BiFunction<Integer, Cat, StringBuilder> function = (number, cat1) -> {
             StringBuilder manyCats = new StringBuilder();
             for (int i = 0; i < number; i++) {
-                manyCats.append(" ").append(cat1.getName());
+                manyCats.append(cat1.getName()).append(" ");
             }
             return manyCats;
         };
@@ -93,7 +93,7 @@ public class CatExecutor {
         if (predicate.test(cat)) {
             return cat.getName() + " is old.";
         } else {
-            return cat.getName() + " not so old";
+            return cat.getName() + " is not so old.";
         }
     }
 

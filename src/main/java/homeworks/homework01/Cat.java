@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.homework01;
 
 /**
  * This class describes object of the homework - Cat.
