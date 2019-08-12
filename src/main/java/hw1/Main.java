@@ -8,7 +8,8 @@ import java.util.function.UnaryOperator;
 
 public class Main {
     public static void main(String[] args) {
-        Cat Barsik = (Cat) new CatFactory().animalCreator();
+        Cat barsik = (Cat) new CatFactory().animalCreator();
+        Cat murzik = (Cat) new CatFactory().animalCreator();
     }
     // Consumer example.
     Consumer<Cat> catConsumer = cat -> cat.run();
@@ -20,7 +21,7 @@ public class Main {
         System.out.println(catFunction.apply(barsik));
 
     // BiFunction example.
-    BiFunction<Cat, Cat, String> biFunction = (cat, cat2) -> cat.getMeow() + " and " + cat2.getMeow();
+    BiFunction<Cat, Cat, String> biFunction = (cat, cat2) -> cat.run() + " and " + cat2.run();
         System.out.println(biFunction.apply(barsik, murzik));
 
     // Operator example.
