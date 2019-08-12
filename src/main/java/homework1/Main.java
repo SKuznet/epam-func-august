@@ -12,7 +12,7 @@ public class Main {
         // Supplier example.
         CatFactory catFactory = new CatFactory();
         Cat barsik = catFactory.createCat("Barsik");
-        Cat murzik = catFactory.createCat("Mursik");
+        Cat murzik = catFactory.createCat("Murzik");
         
         // Consumer example.
         Consumer<Cat> catConsumer = cat -> cat.sayMeow();
