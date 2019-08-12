@@ -19,7 +19,6 @@ public class CatTest {
     @Test(expected = NullPointerException.class)
     public void TestNewCatWithExceptionBothNullArguments() {
         Cat cat = new Cat(null, null);
-
     }
 
     @Test(expected = NullPointerException.class)

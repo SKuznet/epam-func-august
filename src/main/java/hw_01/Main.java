@@ -18,7 +18,6 @@ public class Main {
     public static void main(String[] args) {
         Factory goodCatFactory = new GoodCatFactory();
         Factory badCatFactory = new BadCatFactory();
-
         goodCat = goodCatFactory.getCat("Vaska");
         badCat = badCatFactory.getCat("Murka");
         doConsumerExample();
