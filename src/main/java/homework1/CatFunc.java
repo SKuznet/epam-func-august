@@ -2,7 +2,6 @@ package homework1;
 
 import java.awt.*;
 import java.util.Objects;
-import java.util.function.*;
 
 /**
  * CatFunc shows functional interfaces with lambda logic

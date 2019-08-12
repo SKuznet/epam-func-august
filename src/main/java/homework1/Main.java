@@ -3,6 +3,9 @@ package homework1;
 import java.awt.*;
 import java.util.function.*;
 
+/**
+ * Functional interface practice
+ */
 public class Main {
     public static void main(String[] args) {
         CatFunc catOne = CatFunc.CatFactory.createCat("Barsik", 10);
