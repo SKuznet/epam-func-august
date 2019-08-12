@@ -147,14 +147,4 @@ public class CatFunc {
             return cat;
         }
     }
-
-    @FunctionalInterface
-    interface CheckCat {
-        boolean check(CatFunc cat);
-    }
-
-    @FunctionalInterface
-    interface GetWeight {
-        int get(CatFunc cat);
-    }
 }
