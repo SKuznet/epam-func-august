@@ -12,8 +12,8 @@ public class CatTest {
 
     @Before
     public void createCat(){
-    murzik = CatFactory.createCat("Murzik");
-    barsik = CatFactory.createCat("Barsik");
+        murzik = CatFactory.createCat("Murzik");
+        barsik = CatFactory.createCat("Barsik");
     }
 
     @Test
