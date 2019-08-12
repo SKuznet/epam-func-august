@@ -12,6 +12,7 @@ public class Cat {
     this.name = name;
     this.height = height;
     this.weight = weight;
+    this.isAlive = isAlive;
   }
 
   public String getName() {
