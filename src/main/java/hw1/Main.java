@@ -20,12 +20,12 @@ public class Main {
         System.out.println(function.apply(murka));
 
         UnaryOperator<Cat> unaryOperator = cat -> cat.decrementLives();
-        BinaryOperator<Cat> binaryOperator = (c1, c2) -> c1.call().length()>c2.call().length() ? c1 : c2;
+        BinaryOperator<Cat> binaryOperator = (c1, c2) -> c1.call().length() > c2.call().length() ? c1 : c2;
         System.out.println("\nUnary and Binary operator output:");
         System.out.println(unaryOperator.apply(barsik));
         System.out.println(binaryOperator.apply(barsik, murka));
 
-        Predicate<Cat> predicate = cat -> cat.getLives()>8;
+        Predicate<Cat> predicate = cat -> cat.getLives() > 8;
         System.out.println("\nPredicate function output:");
         System.out.println(predicate.test(barsik));
 

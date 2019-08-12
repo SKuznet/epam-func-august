@@ -26,7 +26,7 @@ public class CatFemale implements Cat {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Cat{" +
                 "type=" + this.getClass() +
                 ", lives=" + this.getLives() +

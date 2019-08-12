@@ -3,8 +3,11 @@ package hw1;
 public interface Cat {
 
     int getLives();
-    Cat decrementLives() ;
+
+    Cat decrementLives();
+
     void setLives(int i);
+
     String call();
 
 }
