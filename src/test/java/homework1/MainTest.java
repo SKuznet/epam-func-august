@@ -9,14 +9,14 @@ public class MainTest {
     private Main main;
 
     @Before
-    public void setUp() {
-        cat = new Cat ( "Barsik", 5, "black" );
-        main = new Main ();
+    public void setUp(){
+        cat = new Cat("Barsik", 5, "black");
+        main = new Main();
     }
 
     @Test
-    public void testCreateCat() {
-        Assert.assertNotNull ( Main.createCat ( "Barsik", 5, "black" ) );
-        Assert.assertNotNull ( Main.createCat ( "Barsik", null, "black" ) );
+    public void testCreateCat(){
+        Assert.assertNotNull(Main.createCat("Barsik", 5, "black"));
+        Assert.assertNotNull(Main.createCat("Barsik", null, "black"));
     }
 }
