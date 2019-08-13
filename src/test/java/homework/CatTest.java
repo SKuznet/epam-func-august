@@ -1,0 +1,19 @@
+package homework;
+
+
+import HomeWork.MyCat;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.List;
+
+import static HomeWork.CatCreator.catCreator;
+
+public class CatTest {
+
+    @Test
+    public void testCatCreator() {
+        List<MyCat> list = null;
+        Assert.assertTrue(catCreator(9).equals(null));
+    }
+}
