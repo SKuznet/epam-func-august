@@ -1,5 +1,7 @@
 package homework1;
 
+import java.util.Objects;
+
 public class Cat {
 
     private String name;
@@ -49,5 +51,21 @@ public class Cat {
     @Override
     public String toString() {
         return "The " + age + "-year-old cat called " + name + " with " + color + " fur really loves to eat " + favoriteFood;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return age == cat.age &&
+                Objects.equals(name, cat.name) &&
+                Objects.equals(color, cat.color) &&
+                Objects.equals(favoriteFood, cat.favoriteFood);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, color, age, favoriteFood);
     }
 }
