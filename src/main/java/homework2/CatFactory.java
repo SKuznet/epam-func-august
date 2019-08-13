@@ -19,5 +19,4 @@ public class CatFactory {
     }
     return toReturn;
   }
-
 }

@@ -80,5 +80,4 @@ public class Main {
     System.out.println(binaryOperator.apply(littleCat, mediumCat).meow());
 
   }
-
 }
