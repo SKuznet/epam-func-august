@@ -14,6 +14,6 @@ public class CatTest {
     @Test
     public void testCatCreator() {
         List<MyCat> list = null;
-        Assert.assertTrue(catCreator(9).equals(null));
+        Assert.assertTrue(!catCreator(8).equals(null));
     }
 }
