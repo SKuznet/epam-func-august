@@ -1,5 +1,7 @@
 package homework1;
 
+import java.util.Objects;
+
 public class Barsik implements Cat {
     private final String MEOW = "Meow from Barsik!";
     private String name;
@@ -53,5 +55,21 @@ public class Barsik implements Cat {
                 ", isHungry=" + isHungry +
                 ", isHerbivore=" + isHerbivore +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Barsik barsik = (Barsik) o;
+        return isHungry() == barsik.isHungry() &&
+                isHerbivore() == barsik.isHerbivore() &&
+                Objects.equals(MEOW, barsik.MEOW) &&
+                Objects.equals(getName(), barsik.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(MEOW, getName(), isHungry(), isHerbivore());
     }
 }
