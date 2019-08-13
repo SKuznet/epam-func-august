@@ -1,5 +1,8 @@
 package homework1.cats;
 
+/**
+ * Cat class, that is used in functional interfaces examples.
+ */
 public class Cat {
     private String name;
 

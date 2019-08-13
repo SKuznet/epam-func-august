@@ -14,6 +14,10 @@ import java.util.function.UnaryOperator;
 import java.util.function.BinaryOperator;
 
 public class Application {
+    /**
+     * Java 8 Function interfaces examples of usage.
+     * @param args command line args
+     */
     public static void main(String[] args) {
         Cat barsik = CatFactory.getCat("Barsik");
         Cat murzik = CatFactory.getCat("Murzik");
