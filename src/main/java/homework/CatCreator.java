@@ -39,7 +39,4 @@ public class CatCreator {
             System.out.println("__________________________________________");
         }
     }
-
 }
-
-
