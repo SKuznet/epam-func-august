@@ -8,6 +8,6 @@ public class Dog implements Animal {
 
     @Override
     public int legs() {
-        return 4;
+        return 5;
     }
 }
