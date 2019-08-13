@@ -38,6 +38,6 @@ public class CatExecutorTest {
         StringBuilder testSb = new StringBuilder("cat1 and cat2 is a family: true ");
         assertEquals(testSb, isFamily(cat1, cat2));
         Cat cat3 = new Cat("cat3", "Male", 9);
-        assertEquals(testSb.replace(testSb.length()-5, testSb.length()-1, "false"), isFamily(cat1, cat2));
+        assertEquals(testSb.replace(testSb.length() - 5, testSb.length() - 1, "false"), isFamily(cat1, cat2));
     }
 }
