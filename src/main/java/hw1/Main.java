@@ -9,31 +9,32 @@ import java.util.function.UnaryOperator;
 public class Main {
     public static void main(String[] args) {
         Cat barsik = (Cat) new CatFactory().animalCreator();
-        Cat murzik = (Cat) new CatFactory().animalCreator();
+        Cat laika = (Cat) new DogFactory().animalCreator();
     }
     // Consumer example.
-    Consumer<Cat> catConsumer = cat -> cat.run();
-        catConsumer.accept(barsik);
-        catConsumer.accept(murzik);
+    Consumer<Animal> animalConsumer = animal -> animal.run();
+        animalConsumer.accept(barsik);
+        animalConsumer.accept(laika);
 
     // Function example.
-    Function<Cat, String> catFunction = cat -> cat.toString();
-        System.out.println(catFunction.apply(barsik));
+    Function<Animal, String> animalFunction =  -> animal.toString();
+        System.out.println(animalFunction.apply(barsik));
 
     // BiFunction example.
-    BiFunction<Cat, Cat, String> biFunction = (cat, cat2) -> cat.run() + " and " + cat2.run();
-        System.out.println(biFunction.apply(barsik, murzik));
+    BiFunction<Animal, Animal, String> biFunction = (animal, animal2) -> animal.run() + " and " + animal2.run();
+        System.out.println(biFunction.apply(barsik, laika));
 
     // Operator example.
     UnaryOperator<String> unaryOperator = s -> s.toUpperCase();
-        System.out.println(unaryOperator.apply(murzik.run()));
+        System.out.println(unaryOperator.apply(laika.run()));
 
     // Predicate example.
-    Predicate<Cat> predicate = cat -> cat.run().equals("Meow from Murzik!");
-        if (predicate.test(murzik)) {
-        System.out.println("It's murzik!");
+    Predicate<Animal> predicate = animal -> animal.run().equals("Meow");
+        if (predicate.test(laika)) {
+        System.out.println("It's laika!");
     } else {
-        System.out.println("It's not a murzik.");
+
+        System.out.println("It's not a laika.");
     }
 }
 }

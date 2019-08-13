@@ -1,11 +1,9 @@
 package hw1;
 
-public class Cat implements Animal {
-    private final String MEOW = "Meow";
-
+public class Dog implements Animal {
     @Override
     public void run() {
-        System.out.println(MEOW);
+        System.out.println("I'm dog,I can run fast");
     }
 
     @Override
