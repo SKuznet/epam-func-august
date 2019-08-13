@@ -1,12 +1,12 @@
-package HomeWork;
+package homework;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.*;
 
-import static HomeWork.CatCreator.catCreator;
-import static HomeWork.CatCreator.catPrinter;
+import static homework.CatCreator.catCreator;
+import static homework.CatCreator.catPrinter;
 
 public class Main {
 

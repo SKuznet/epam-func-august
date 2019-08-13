@@ -1,4 +1,4 @@
-package HomeWork;
+package homework;
 
 public class MyCat {
     private String name;
