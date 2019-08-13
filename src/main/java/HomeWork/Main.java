@@ -46,6 +46,13 @@ public class Main {
             Supplier<String[]> supplier = () -> new String[]{finalMyCatList1.get(0).getName(), finalMyCatList1.get(1).getName(), finalMyCatList1.get(2).getName()};
             System.out.println(Arrays.toString(supplier.get()));
 
+            //Predicate
+            Predicate<String> predicate = o -> !o.isEmpty();
+            System.out.println(predicate.test(myCatList.get(1).getName()));
+
+            //BiPredicate
+            BiPredicate<String, String> biPredicate = (s1, s2) -> (s1.equals(s2));
+            System.out.println(biPredicate.test(myCatList.get(0).getName(), myCatList.get(1).getName()));
 
         }
 }

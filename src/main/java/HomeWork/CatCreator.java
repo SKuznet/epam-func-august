@@ -7,6 +7,10 @@ import java.util.Random;
 public class CatCreator {
 
     public static List<MyCat> catCreator(int countOfCats){
+        if (countOfCats > 8){
+            System.out.println("Invalid count of cats");
+            return null;
+        }
         List<MyCat> myCatList = new ArrayList<>();
         List<String> catNames = new ArrayList<>();
         catNames.add("First_Kitty");
