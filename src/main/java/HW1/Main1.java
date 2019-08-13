@@ -7,8 +7,8 @@ public class Main1 {
         CatFactory siamCatFactory = new SiamCatFactory();
         CatFactory britishCatFactory = new BritishCatFactory();
 
-        Cat siam_cat = siamCatFactory.create();
-        Cat british_cat = britishCatFactory.create();
+        SiamCat siam_cat = (SiamCat)siamCatFactory.create();
+        BritishCat british_cat = (BritishCat) britishCatFactory.create();
 
         siam_cat.sayHello();
         british_cat.sayHello();
@@ -44,7 +44,5 @@ public class Main1 {
 
         BinaryOperator<Boolean> binaryOperator = (s1, s2) -> s1 == s2;
         System.out.println("BinaryOperator result = " + binaryOperator.apply(british_cat.isAfraidOfDogs(), siam_cat.isAfraidOfDogs()));
-
     }
-
 }

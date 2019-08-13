@@ -1,9 +1,23 @@
 package HW1;
 
-public interface Cat {
-    void sayHello();
-    void setName(String name);
-    String getName();
-    boolean isAfraidOfDogs();
-    void setAfraidOfDogs(boolean afraidOfDogs);
+abstract class Cat {
+    boolean afraidOfDogs;
+    String name;
+    abstract void sayHello();
+    String getName() {
+        return name;
+    }
+    void setName(String name) {
+        this.name = name;
+    }
+    boolean isAfraidOfDogs() {
+        return afraidOfDogs;
+    }
+    void setAfraidOfDogs(boolean afraidOfDogs) {
+        this.afraidOfDogs = afraidOfDogs;
+    }
+
+
+
+
 }

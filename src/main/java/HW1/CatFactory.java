@@ -1,5 +1,5 @@
 package HW1;
 
 abstract class CatFactory {
-    abstract Cat create();
+    public abstract Cat create();
 }
