@@ -1,5 +1,7 @@
 package lesson3.hw.cats;
 
+import java.util.Objects;
+
 public class Cat {
     private String name;
     private int age;
@@ -51,5 +53,21 @@ public class Cat {
                 ", isHungry=" + isHungry +
                 ", isHerbivore=" + isHerbivore +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return age == cat.age &&
+                isHungry == cat.isHungry &&
+                isHerbivore == cat.isHerbivore &&
+                Objects.equals(name, cat.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, isHungry, isHerbivore);
     }
 }
