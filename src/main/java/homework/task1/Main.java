@@ -25,13 +25,7 @@ public class Main {
         BiPredicate<Cat, String> biPredicate = (x, z) -> x.getName().equalsIgnoreCase(z);
         System.out.println("John hungry? " + biPredicate.test(john, "dalton"));
 
-        Function<Cat, String> function = cat -> {
-            if (cat.isHungry()) {
-                return "I want to eat";
-            } else {
-                return "Full";
-            }
-        };
+        Function<Cat, String> function = cat -> (cat.isHungry()) ? "I want to eat" : "Full";
         System.out.println("Function example: " + function.apply(john));
         BiFunction<Cat, Cat, String> biFunction = (j, r) -> j.getName().concat(r.getName());
         System.out.println("BiFunction example: " + biFunction.apply(john, rick));

@@ -11,7 +11,7 @@ public class CatFabric {
         } else if (name.equalsIgnoreCase("Rick")) {
             return new Rick(name, false);
         } else {
-            throw new IllegalArgumentException("no such cat");
+            throw new IllegalArgumentException();
         }
     }
 }
