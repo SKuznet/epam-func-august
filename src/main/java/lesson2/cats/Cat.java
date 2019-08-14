@@ -42,5 +42,4 @@ public class Cat {
         isHerbivore = herbivore;
     }
 
-
 }
