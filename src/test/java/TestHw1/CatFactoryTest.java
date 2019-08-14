@@ -1,10 +1,10 @@
 package TestHw1;
 
-import hw1.*;
-import hw1.CatFactory;
-import hw1.Cats.Barsik;
-import hw1.Cats.Murzik;
-import hw1.Cats.NoNameCat;
+import HomeWorcks.hw1.*;
+import HomeWorcks.hw1.CatFactory;
+import HomeWorcks.hw1.Cats.Barsik;
+import HomeWorcks.hw1.Cats.Murzik;
+import HomeWorcks.hw1.Cats.NoNameCat;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

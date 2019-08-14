@@ -1,18 +1,17 @@
-package hw1.Cats;
+package HomeWorcks.hw1.Cats;
 
+import HomeWorcks.hw1.Cat;
 
-import hw1.Cat;
-
-public class NoNameCat implements Cat {
+public class Murzik implements Cat {
 
     @Override
     public void sayName() {
-        System.out.println("I have no name!");
+        System.out.println("My name is Murzik!");
     }
 
     @Override
     public String name() {
-        return "NoNameCat";
+        return "Murzik";
     }
 
     @Override
@@ -22,5 +21,4 @@ public class NoNameCat implements Cat {
         }
         else return false;
     }
-
 }

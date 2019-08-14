@@ -1,6 +1,6 @@
-package hw1.Cats;
+package HomeWorcks.hw1.Cats;
 
-import hw1.Cat;
+import HomeWorcks.hw1.Cat;
 
 public class Barsik implements Cat {
 

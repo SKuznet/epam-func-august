@@ -1,8 +1,8 @@
-package hw1;
+package HomeWorcks.hw1;
 
-import hw1.Cats.Barsik;
-import hw1.Cats.Murzik;
-import hw1.Cats.NoNameCat;
+import HomeWorcks.hw1.Cats.Barsik;
+import HomeWorcks.hw1.Cats.Murzik;
+import HomeWorcks.hw1.Cats.NoNameCat;
 
 public class CatFactory {
 

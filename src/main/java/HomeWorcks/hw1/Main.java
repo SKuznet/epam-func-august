@@ -1,4 +1,4 @@
-package hw1;
+package HomeWorcks.hw1;
 
 import java.util.function.*;
 
