@@ -6,3 +6,7 @@
 на нем использовать все типы функциональных интерфейсов, что мы прошли.
 
 ## HW2 - 152p OCP
+
+https://youtu.be/xn3DLaNqY3o
+https://youtu.be/1csilTkE_Hw
+https://youtu.be/feupv_mZ3og
