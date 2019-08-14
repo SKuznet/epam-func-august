@@ -15,4 +15,12 @@ public class NoNameCat implements Cat {
         return "NoNameCat";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(super.getClass() == obj.getClass()) {
+            return true;
+        }
+        else return false;
+    }
+
 }

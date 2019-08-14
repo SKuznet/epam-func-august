@@ -8,7 +8,7 @@ public class CatFactory {
 
     public static Cat getCat(String name) {
         switch (name) {
-            case "Barsic":
+            case "Barsik":
                 return new Barsik();
             case "Murzik":
                 return new Murzik();
@@ -16,4 +16,5 @@ public class CatFactory {
                 return new NoNameCat();
         }
     }
+
 }

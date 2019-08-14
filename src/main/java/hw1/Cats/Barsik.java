@@ -14,4 +14,12 @@ public class Barsik implements Cat {
         return "Barsik";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(super.getClass() == obj.getClass()) {
+            return true;
+        }
+        else return false;
+    }
+
 }
