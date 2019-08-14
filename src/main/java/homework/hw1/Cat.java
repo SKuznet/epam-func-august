@@ -6,6 +6,10 @@ public class Cat extends Pet {
     private boolean UsedForWitchCraft;
 
     public Cat() {
+        this.setName("Random");
+        this.setAge(4);
+        this.setCatType(CatType.DOMESTIC);
+        this.setUsedForWitchCraft(false);
     }
 
     public Cat(String name, Integer age, CatType catType, boolean usedForWitchCraft) {
@@ -32,6 +36,7 @@ public class Cat extends Pet {
 
     @Override
     public String getSound() {
+        System.out.println("Meaw");
         return "Meaw";
     }
 }
