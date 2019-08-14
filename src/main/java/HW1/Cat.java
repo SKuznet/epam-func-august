@@ -16,8 +16,4 @@ abstract class Cat {
     void setAfraidOfDogs(boolean afraidOfDogs) {
         this.afraidOfDogs = afraidOfDogs;
     }
-
-
-
-
 }
