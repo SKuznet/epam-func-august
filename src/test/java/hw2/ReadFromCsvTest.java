@@ -12,12 +12,23 @@ import static org.junit.Assert.assertEquals;
 
 public class ReadFromCsvTest {
 
+    /**
+     * Checks behaviour for non-existent file
+     * Expected NoSuchFileException
+     *
+     * @throws IOException
+     */
     @Test(expected = NoSuchFileException.class)
     public void readIncorrect() throws IOException {
         String path = "/non_existed_path";
         ReadFromCsv.read(path);
     }
 
+    /**
+     * Checks how many reads has correct input
+     *
+     * @throws IOException
+     */
     @Test
     public void readCorrect() throws IOException {
         String filename = System.getProperties().getProperty("user.dir") + "/src/main/resources/websites.csv";

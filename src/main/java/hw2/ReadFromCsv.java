@@ -15,6 +15,14 @@ public class ReadFromCsv {
         }
     }
 
+    /**
+     * Read all lines from selected file, separate lines by comma,
+     * filter by containing 'http' or 'www' substring
+     * print all matches by first column (exclude labels)
+     *
+     * @param filename full path to CSV file
+     * @throws IOException
+     */
     static void read(String filename) throws IOException {
         Stream<String> streamFromFile = Files.lines(Paths.get(filename));
         streamFromFile
