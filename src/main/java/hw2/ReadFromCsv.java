@@ -3,38 +3,25 @@ package hw2;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ReadFromCsv {
     public static void main(String[] args) {
-        List<String[]> list = new ArrayList<>();
-        List<String> listUrl = new ArrayList<>();
-
+        String filename = System.getProperties().getProperty("user.dir") + "/src/main/resources/websites.csv";
         try {
-            String path = System.getProperties().getProperty("user.dir");
-            String filename = path + "/src/main/resources/websites.csv";
-            try (Stream<String> streamFromFile = Files.lines(Paths.get(filename))) {
-                list = streamFromFile
-                        .map(l -> l.split(","))
-                        .skip(1)
-                        .collect(Collectors.toList());
-
-                for (String[] strings : list) {
-                    String url = strings[0];
-                    if (url.contains("www") || url.contains("http")) {
-                        listUrl.add(url);
-                    }
-                }
-
-                List<String> urlList = listUrl.stream().sorted().collect(Collectors.toList());
-                urlList.forEach(System.out::println);
-            }
+            read(filename);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Cannot parse cause " + e);
         }
+    }
+
+    static void read(String filename) throws IOException {
+        Stream<String> streamFromFile = Files.lines(Paths.get(filename));
+        streamFromFile
+                .skip(1)
+                .map(l -> l.split(","))
+                .filter(l -> String.valueOf(l[0]).contains("http") || String.valueOf(l[0]).contains("www"))
+                .forEach(x -> System.out.println(x[0]));
+        streamFromFile.close();
     }
 }
