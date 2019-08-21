@@ -8,7 +8,7 @@ public class CatFactory {
     input = input.toLowerCase();
     switch (input) {
         case "catpet": cat = new CatPet();
-        break;
+            break;
         case "lion": cat = new Lion();
             break;
         case "tiger": cat = new Tiger();
