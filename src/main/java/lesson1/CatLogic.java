@@ -3,7 +3,7 @@ package lesson1;
 public class CatLogic {
 
     public int getCatCount(String catName, String catWoman) {
-        if (catName != null && catName.equalsIgnoreCase("Barsik") && catWoman != null) {
+        if (catName!= null && catName.equalsIgnoreCase("Barsik") && catWoman != null) {
             return 2;
         } else if ((catName == null && catWoman != null) || (catName != null && catWoman == null)) {
             return 1;
