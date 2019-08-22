@@ -11,8 +11,7 @@ public class CSVReader {
 
     public static List<String> findLinks(String path) {
         try {
-            return Files.readAllLines(Paths.get(path))
-                    .stream()
+            return Files.lines(Paths.get(path))
                     .filter((s) -> s.contains("www") || s.contains("http"))
                     .sorted()
                     .collect(Collectors.toList());
