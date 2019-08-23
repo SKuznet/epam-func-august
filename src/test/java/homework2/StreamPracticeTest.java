@@ -9,15 +9,15 @@ import static org.junit.Assert.*;
 
 public class StreamPracticeTest {
     private final StreamPractice streamPractice = new StreamPractice();
-    private final Path path = Paths.get("C:\\Users\\anton\\Desktop\\Java\\epam-func-august\\src\\main\\resources\\FileForStream.csv");
+    private final Path path = Paths.get("src\\main\\resources\\FileForStream.csv");
 
     @Test
     public void testWithCorrectPath() {
         assertFalse(streamPractice.getListFromCsv(path).isEmpty());
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testWithIncorrectPath() {
-        assertNull(streamPractice.getListFromCsv(Paths.get("")));
+        streamPractice.getListFromCsv(Paths.get(""));
     }
 }

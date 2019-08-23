@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class StreamPractice {
     public static void main(String[] args) {
-        Path path = Paths.get("C:\\Users\\anton\\Desktop\\Java\\epam-func-august\\src\\main\\resources\\FileForStream.csv");
+        Path path = Paths.get("src\\main\\resources\\FileForStream.csv");
     }
 
     public List<String> getListFromCsv(Path path) {
@@ -19,7 +19,7 @@ public class StreamPractice {
         try {
             stringStream = Files.lines(path).collect(Collectors.toList());
         } catch (IOException e) {
-            return null;
+            throw new IllegalArgumentException();
         }
         Collections.sort(stringStream);
         System.out.println(stringStream);
