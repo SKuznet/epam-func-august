@@ -13,9 +13,10 @@ import java.util.stream.Stream;
 
 @Slf4j
 public class StreamHomeTask {
+    private static final String customPath = "src/main/resources/container.csv";
 
     public static void main(String[] args) {
-        Path path = Paths.get("src/main/resources/container.csv");
+        Path path = Paths.get(customPath);
         System.out.println(new StreamHomeTask().getFileContentAsSortedList(path));
     }
 
