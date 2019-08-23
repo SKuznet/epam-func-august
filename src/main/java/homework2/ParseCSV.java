@@ -1,9 +1,11 @@
 package homework2;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -12,6 +14,7 @@ import java.util.stream.Stream;
  * Class ParseCSV implements logic of csv file
  */
 public class ParseCSV {
+    private static final Logger LOG = LoggerFactory.getLogger(ParseCSV.class);
 
     /**
      * Creating stream from file and afterwards put it into readStream method.
@@ -23,7 +26,7 @@ public class ParseCSV {
             lines = Files.lines(Paths.get("C:\\Users\\Fedor_Glushchenko\\git\\epam-func-august\\src\\main\\resources\\File.csv"));
             System.out.println(readStream(lines));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOG.error(e.getMessage(), e);
         }
     }
 
