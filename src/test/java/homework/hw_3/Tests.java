@@ -9,9 +9,9 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class Tests {
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testWithWrongPath() {
-        assertArrayEquals(new String[]{"File not found!"}, getSortedListFromCSV(Paths.get("/qwerty")));
+        getSortedListFromCSV(Paths.get("/qwerty"));
     }
 
     @Test

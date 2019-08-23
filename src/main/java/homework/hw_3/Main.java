@@ -15,7 +15,7 @@ public class Main {
             List<String> contentList = contentStream.sorted().collect(Collectors.toList());
             return contentList.stream().toArray(String[]::new);
         } catch (IOException e) {
-            return new String[]{"File not found!"};
+            throw new IllegalArgumentException();
         }
     }
 
