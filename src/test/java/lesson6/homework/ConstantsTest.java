@@ -11,8 +11,8 @@ public class ConstantsTest {
 
     @Test
     public void webElementConstantTest(){
-        Assert.assertTrue(wwwStringTest.matches("^(www|http)([\\S\\s]*)$"));
-        Assert.assertTrue(httpStringTest.matches("^(www|http)([\\S\\s]*)$"));
-        Assert.assertFalse(stringTest.matches("^(www|http)([\\S\\s]*)$"));
+        Assert.assertTrue(wwwStringTest.matches(Constants.WEB_ELEMENT));
+        Assert.assertTrue(httpStringTest.matches(Constants.WEB_ELEMENT));
+        Assert.assertFalse(stringTest.matches(Constants.WEB_ELEMENT));
     }
 }
