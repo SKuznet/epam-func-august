@@ -6,10 +6,10 @@ import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-public class Main {
+public class Hw2main {
 
   public static void main(String[] args) {
-    Main main = new Main();
+    Hw2main main = new Hw2main();
     try {
       System.out.println(Arrays.toString(main.read("CSV/homework.csv")));
     } catch (IOException e) {
