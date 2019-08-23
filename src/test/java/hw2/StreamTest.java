@@ -27,8 +27,13 @@ public class StreamTest {
     }
 
     @Test
-    public void streamResultTest() throws IOException {
-        Stream<String> streamFromFile = Files.lines(file.toPath());
+    public void streamResultTest(){
+        Stream<String> streamFromFile = null;
+        try {
+            streamFromFile = Files.lines(file.toPath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(Arrays.toString(streamFromFile.sorted().filter((s -> s.contains("http"))).toArray(String[]::new)));
         assertEquals("[https://aaa, https://web.whatsapp.com/, https://yandex.ru/]\r\n", outContent.toString());
     }
