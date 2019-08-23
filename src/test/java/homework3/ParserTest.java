@@ -10,7 +10,7 @@ public class ParserTest {
 
     @Test
     public void testParseCsvFile(){
-        String fileName = "C:\\Users\\dima\\IdeaProjects\\epam-func-august\\src\\main\\resources\\source.csv";
+        String fileName = "src\\main\\resources\\source.csv";
         assertFalse(parser.parseCsvFile(fileName).isEmpty());
     }
 
