@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import static homework.hw_3.Main.getSortedListFromCSV;
 import static org.junit.Assert.assertArrayEquals;
 
-public class Tests {
+public class MainTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testWithWrongPath() {
