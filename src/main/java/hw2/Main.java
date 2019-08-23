@@ -12,6 +12,6 @@ public class Main {
                 Main.class.getClassLoader().getResource("Book.csv").getFile()
         );
         Stream<String> streamFromFile = Files.lines(file.toPath());
-        System.out.println(Arrays.toString(streamFromFile.sorted().filter((s -> s.contains("http"))).toArray(String[]::new)));
+        System.out.println(Arrays.toString(streamFromFile.sorted().filter((s -> s.matches("^(www|http)([\\S\\s]*)$"))).toArray(String[]::new)));
     }
 }
