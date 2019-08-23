@@ -12,18 +12,17 @@ import java.util.stream.Collectors;
 public class StreamPractice {
     public static void main(String[] args) {
         Path path = Paths.get("C:\\Users\\anton\\Desktop\\Java\\epam-func-august\\src\\main\\resources\\FileForStream.csv");
-
     }
 
-    public boolean getListFromCsv(Path path) {
+    public List<String> getListFromCsv(Path path) {
         List<String> stringStream = new ArrayList<>();
         try {
             stringStream = Files.lines(path).collect(Collectors.toList());
         } catch (IOException e) {
-            return false;
+            return null;
         }
         Collections.sort(stringStream);
         System.out.println(stringStream);
-        return true;
+        return stringStream;
     }
 }

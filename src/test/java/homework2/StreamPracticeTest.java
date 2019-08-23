@@ -13,11 +13,11 @@ public class StreamPracticeTest {
 
     @Test
     public void testWithCorrectPath() {
-        assertTrue(streamPractice.getListFromCsv(path));
+        assertFalse(streamPractice.getListFromCsv(path).isEmpty());
     }
 
     @Test
     public void testWithIncorrectPath() {
-        assertFalse(streamPractice.getListFromCsv(Paths.get("")));
+        assertNull(streamPractice.getListFromCsv(Paths.get("")));
     }
 }
