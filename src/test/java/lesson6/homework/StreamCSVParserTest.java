@@ -19,8 +19,7 @@ public class StreamCSVParserTest {
     public void getStreamFromFilePathTest(){
         Assert.assertNotNull(streamCSVParser.getStreamFromFilePath(filePath));
     }
-
-
+    
     @Test
     public void getSortedStringArrayByStreamContainsWebElementsTest(){
         String[] actual = streamCSVParser.getSortedArrayContainsWebElements(streamCSVParser.getStreamFromFilePath(filePath));
