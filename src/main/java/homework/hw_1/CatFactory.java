@@ -1,8 +1,8 @@
-package lesson3.hw;
+package homework.hw_1;
 
-import lesson3.hw.cats.Barsik;
-import lesson3.hw.cats.Cat;
-import lesson3.hw.cats.Mursik;
+import homework.hw_1.cats.Cat;
+import homework.hw_1.cats.Mursik;
+import homework.hw_1.cats.Barsik;
 
 public class CatFactory {
     public static Cat createCat(String name) {

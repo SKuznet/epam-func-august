@@ -1,12 +1,11 @@
-package lesson3_hw;
+package homework.hw_1;
 
-import lesson3.hw.cats.Barsik;
-import lesson3.hw.cats.Cat;
-import lesson3.hw.cats.Mursik;
+import homework.hw_1.cats.Barsik;
+import homework.hw_1.cats.Mursik;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static lesson3.hw.CatFactory.createCat;
+import static homework.hw_1.CatFactory.createCat;
 
 public class CatFactoryTest {
     @Test

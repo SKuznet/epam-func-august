@@ -1,4 +1,4 @@
-package lesson3.hw.cats;
+package homework.hw_1.cats;
 
 
 public class Barsik extends Cat {

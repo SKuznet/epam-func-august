@@ -1,6 +1,6 @@
-package lesson3.hw;
+package homework.hw_1;
 
-import lesson3.hw.cats.Cat;
+import homework.hw_1.cats.Cat;
 
 import java.util.function.*;
 
