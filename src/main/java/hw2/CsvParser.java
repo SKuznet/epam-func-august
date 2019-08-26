@@ -15,7 +15,7 @@ import static java.util.stream.Collectors.toList;
 
 public class CsvParser {
 
-    private List<Cat> processInputFile(String inputFilePath) throws FileNotFoundException {
+    public List<Cat> processInputFile(String inputFilePath) throws FileNotFoundException {
         InputStream is = new FileInputStream(new File("cats.csv"));
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
