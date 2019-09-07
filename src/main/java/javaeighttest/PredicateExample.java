@@ -1,4 +1,4 @@
-package java8test;
+package javaeighttest;
 
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;

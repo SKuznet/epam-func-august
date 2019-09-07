@@ -1,4 +1,4 @@
-package java8test;
+package javaeighttest;
 
 import java.util.function.BinaryOperator;
 import java.util.function.UnaryOperator;
